@@ -21,5 +21,6 @@ namespace gymapp.Models
     public class GymAppDBContext : DbContext
     {
         public DbSet<Activity> Activities { get; set; }
+        public DbSet<Room> Rooms { get; set; }
     }
 }
