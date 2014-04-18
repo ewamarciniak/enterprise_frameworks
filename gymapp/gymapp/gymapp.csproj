@@ -164,6 +164,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201404180026303_InitialCreate.cs" />
+    <Compile Include="Migrations\201404180026303_InitialCreate.Designer.cs">
+      <DependentUpon>201404180026303_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201404180910454_MakeActivityNameCompulsory.cs" />
+    <Compile Include="Migrations\201404180910454_MakeActivityNameCompulsory.Designer.cs">
+      <DependentUpon>201404180910454_MakeActivityNameCompulsory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -226,7 +235,14 @@
     <Content Include="Views\Activities\Edit.cshtml" />
     <Content Include="Views\Activities\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201404180026303_InitialCreate.resx">
+      <DependentUpon>201404180026303_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404180910454_MakeActivityNameCompulsory.resx">
+      <DependentUpon>201404180910454_MakeActivityNameCompulsory.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

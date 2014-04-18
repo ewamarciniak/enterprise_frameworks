@@ -11,6 +11,7 @@ namespace gymapp.Models
     public class Activity
     {
         public int ActivityID { get; set; }
+        [Required]
         public string Name { get; set; }
         [Required]
         [DisplayName("Calories per Hour")]
