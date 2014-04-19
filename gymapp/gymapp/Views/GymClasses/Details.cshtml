@@ -1,0 +1,50 @@
+﻿@model gymapp.Models.GymClass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GymClass</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Activity.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activity.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Room.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DurationInMinutes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DurationInMinutes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GymClassID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

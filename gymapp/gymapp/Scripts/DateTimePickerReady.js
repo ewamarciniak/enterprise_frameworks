@@ -1,0 +1,3 @@
+﻿$(function () {
+    $("#ClassDate").datetimepicker();
+});
