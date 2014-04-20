@@ -23,5 +23,6 @@ namespace gymapp.Models
         public DbSet<Activity> Activities { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<GymClass> GymClasses { get; set; }
+        public DbSet<MedicalHistory> MedicalHistores { get; set; }
     }
 }

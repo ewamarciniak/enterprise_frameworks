@@ -1,0 +1,121 @@
+﻿@model gymapp.Models.MedicalHistory
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>MedicalHistory</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RecentlyHospitalized, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RecentlyHospitalized)
+                @Html.ValidationMessageFor(model => model.RecentlyHospitalized)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HighBloodPressure, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HighBloodPressure)
+                @Html.ValidationMessageFor(model => model.HighBloodPressure)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HighCholesterol, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HighCholesterol)
+                @Html.ValidationMessageFor(model => model.HighCholesterol)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Diabetes, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Diabetes)
+                @Html.ValidationMessageFor(model => model.Diabetes)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HeartAttackOrStroke, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HeartAttackOrStroke)
+                @Html.ValidationMessageFor(model => model.HeartAttackOrStroke)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HeartConditions, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HeartConditions)
+                @Html.ValidationMessageFor(model => model.HeartConditions)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BackProblems, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BackProblems)
+                @Html.ValidationMessageFor(model => model.BackProblems)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Allergies, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Allergies)
+                @Html.ValidationMessageFor(model => model.Allergies)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Medication, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Medication)
+                @Html.ValidationMessageFor(model => model.Medication)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ChronicIlnesses, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ChronicIlnesses)
+                @Html.ValidationMessageFor(model => model.ChronicIlnesses)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Other, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Other)
+                @Html.ValidationMessageFor(model => model.Other)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

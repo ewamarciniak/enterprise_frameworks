@@ -1,0 +1,93 @@
+﻿@model IEnumerable<gymapp.Models.MedicalHistory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RecentlyHospitalized)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HighBloodPressure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HighCholesterol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diabetes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeartAttackOrStroke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeartConditions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BackProblems)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Allergies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medication)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicIlnesses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Other)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecentlyHospitalized)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HighBloodPressure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HighCholesterol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diabetes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeartAttackOrStroke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeartConditions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BackProblems)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Allergies)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medication)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicIlnesses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Other)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MedicalHistoryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MedicalHistoryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MedicalHistoryID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,106 @@
+﻿@model gymapp.Models.MedicalHistory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MedicalHistory</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RecentlyHospitalized)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecentlyHospitalized)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HighBloodPressure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HighBloodPressure)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HighCholesterol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HighCholesterol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diabetes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diabetes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeartAttackOrStroke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeartAttackOrStroke)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeartConditions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeartConditions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BackProblems)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BackProblems)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Allergies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Allergies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medication)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChronicIlnesses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChronicIlnesses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Other)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Other)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MedicalHistoryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
